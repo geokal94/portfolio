@@ -1,7 +1,8 @@
 # My Homepage
 
 [giorgoskallis.vercel.app](https://giorgoskallis.vercel.app)
-This website is inspired by <a href='https://www.craftz.dog/' target='_blank'>craftz.dog</a> website.
+
+*This website is inspired by <a href='https://www.craftz.dog/' target='_blank'>craftz.dog</a> website.*
 
 ## Stack
 
