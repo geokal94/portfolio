@@ -75,10 +75,12 @@ const Home = () => (
           About
         </Heading>
         <Paragraph>
-          Giorgos is a Full Stack developer based in Athens. He has a passion
-          for solving real life problems with code and loves to experiment with
-          new technologies. He has experience in building web and mobile
-          applications, both on the front-end and back-end.
+          Giorgos is a Full Stack developer based in Athens and currently works
+          for Pitcher AG, a software sales enablement company based in Zurich,
+          Switzerland. He has a passion for solving real life problems with code
+          and loves to experiment with new technologies. He has experience in
+          building web and mobile applications, both on the front-end and
+          back-end.
         </Paragraph>
         <Box align="center" my={4}>
           <Link href="/projects" as={NextLink} passHref scroll={false}>
