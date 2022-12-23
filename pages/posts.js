@@ -8,7 +8,7 @@ const Posts = () => (
   <Layout title="Posts">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
-        My Blog Posts
+        My Blog Posts (More coming soon...)
       </Heading>
 
       <Section delay={0.1}>
