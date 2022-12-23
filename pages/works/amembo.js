@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
+import { Title, WorkImage, Meta } from '../../components/project'
 import P from '../../components/paragraph'
 
 const Work = () => (
@@ -22,7 +22,7 @@ const Work = () => (
         amembo <Badge>2005-2008</Badge>
       </Title>
       <Center my={6}>
-        <Image src="/images/works/amembo_icon.png" alt="icon" />
+        <Image src="/images/projects/amembo_icon.png" alt="icon" />
       </Center>
       <P>
         P2P private file sharing tool with MSN Messenger integration for Windows
@@ -92,11 +92,11 @@ const Work = () => (
       </UnorderedList>
 
       <SimpleGrid columns={2} gap={2}>
-        <WorkImage src="/images/works/amembo_01.gif" alt="amembo" />
-        <WorkImage src="/images/works/amembo_02.gif" alt="amembo" />
+        <WorkImage src="/images/projects/amembo_01.gif" alt="amembo" />
+        <WorkImage src="/images/projects/amembo_02.gif" alt="amembo" />
       </SimpleGrid>
-      <WorkImage src="/images/works/amembo_03.jpg" alt="amembo" />
-      <WorkImage src="/images/works/amembo_04.jpg" alt="amembo" />
+      <WorkImage src="/images/projects/amembo_03.jpg" alt="amembo" />
+      <WorkImage src="/images/projects/amembo_04.jpg" alt="amembo" />
     </Container>
   </Layout>
 )
