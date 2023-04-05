@@ -82,13 +82,13 @@ const Home = () => (
           building web and mobile applications, both on the front-end and
           back-end.
         </Paragraph>
-        <Box align="center" my={4}>
+        {/* <Box align="center" my={4}>
           <Link href="/projects" as={NextLink} passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
           </Link>
-        </Box>
+        </Box> */}
       </Section>
 
       <Section delay={0.2}>

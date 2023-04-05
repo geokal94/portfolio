@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub, IoReaderOutline } from 'react-icons/io5'
+import { IoLogoGithub, IoReaderOutline, IoLogoLinkedin } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -71,9 +71,9 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/projects" path={path}>
+          {/* <LinkItem href="/projects" path={path}>
             Projects
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
@@ -100,6 +100,18 @@ const Navbar = props => {
           >
             <IoReaderOutline />
             Blog
+          </LinkItem>
+          <LinkItem
+            target="_blank"
+            href="https://www.linkedin.com/in/giorgos-kallis/"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoLinkedin />
+            LinkedIn
           </LinkItem>
         </Stack>
 
@@ -137,6 +149,13 @@ const Navbar = props => {
                   target="_blank"
                 >
                   Blog
+                </MenuItem>
+                <MenuItem
+                  as={Link}
+                  href="https://www.linkedin.com/in/giorgos-kallis/"
+                  target="_blank"
+                >
+                  LinkedIn
                 </MenuItem>
               </MenuList>
             </Menu>
