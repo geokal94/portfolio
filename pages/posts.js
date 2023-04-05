@@ -4,6 +4,7 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
 import thumbFullStackTransition from '../public/images/contents/full-stack-transition.jpeg'
+import thumbDjango from '../public/images/contents/django.png'
 const Posts = () => (
   <Layout title="Posts">
     <Container>
@@ -17,6 +18,11 @@ const Posts = () => (
             title="How I transitioned from Frontend to Full Stack Development"
             thumbnail={thumbFullStackTransition}
             href="https://giorgoskallisgr.devdojo.com/how-i-transitioned-from-frontend-to-full-stack-development"
+          />
+          <GridItem
+            title="Optimizing Performance in Django: Tips and Techniques"
+            thumbnail={thumbDjango}
+            href="https://giorgoskallisgr.devdojo.com/optimizing-performance-in-django-tips-and-techniques"
           />
         </SimpleGrid>
       </Section>
