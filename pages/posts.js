@@ -5,6 +5,8 @@ import { GridItem } from '../components/grid-item'
 
 import thumbFullStackTransition from '../public/images/contents/full-stack-transition.jpeg'
 import thumbDjango from '../public/images/contents/django.png'
+import thumbDjangoSentry from '../public/images/contents/django-sentry.jpeg'
+
 const Posts = () => (
   <Layout title="Posts">
     <Container>
@@ -23,6 +25,11 @@ const Posts = () => (
             title="Optimizing Performance in Django: Tips and Techniques"
             thumbnail={thumbDjango}
             href="https://giorgoskallisgr.devdojo.com/optimizing-performance-in-django-tips-and-techniques"
+          />
+          <GridItem
+            title="How to overcome the N+1 Sentry error in Django"
+            thumbnail={thumbDjangoSentry}
+            href="https://giorgoskallisgr.devdojo.com/how-to-overcome-the-n1-sentry-error-in-django"
           />
         </SimpleGrid>
       </Section>
