@@ -1,6 +1,6 @@
 # My Homepage
 
-[giorgoskallis.vercel.app](https://giorgoskallis.vercel.app)
+[giorgoskallis.dev](https://giorgoskallis.dev)
 
 *This website is inspired by <a href='https://www.craftz.dog/' target='_blank'>craftz.dog</a> website.*
 
