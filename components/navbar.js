@@ -22,17 +22,18 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   return (
-    <NextLink href={href} passHref scroll={false}>
-      <Link
-        p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
-        target={target}
-        {...props}
-      >
-        {children}
-      </Link>
-    </NextLink>
+    <Link
+      as={NextLink}
+      href={href}
+      scroll={false}
+      p={2}
+      bg={active ? 'grassTeal' : undefined}
+      color={active ? '#202023' : inactiveColor}
+      target={target}
+      {...props}
+    >
+      {children}
+    </Link>
   )
 }
 
@@ -74,9 +75,9 @@ const Navbar = props => {
           {/* <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem> */}
-          <LinkItem href="/posts" path={path}>
+          {/* <LinkItem href="/posts" path={path}>
             Posts
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem
             target="_blank"
             href="https://github.com/geokal94"
@@ -88,18 +89,6 @@ const Navbar = props => {
           >
             <IoLogoGithub />
             GitHub
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://giorgoskallisgr.devdojo.com/"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoReaderOutline />
-            Blog
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -127,28 +116,17 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                {/* <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
-                </NextLink> */}
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
+                <MenuItem as={NextLink} href="/">
+                  About
+                </MenuItem>
+                {/* <MenuItem as={NextLink} href="/projects">Projects</MenuItem> */}
+                {/* <MenuItem as={NextLink} href="/posts">Posts</MenuItem> */}
                 <MenuItem
                   as={Link}
                   href="https://github.com/geokal94"
                   target="_blank"
                 >
                   GitHub
-                </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href="https://giorgoskallisgr.devdojo.com/"
-                  target="_blank"
-                >
-                  Blog
                 </MenuItem>
                 <MenuItem
                   as={Link}

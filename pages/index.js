@@ -33,7 +33,7 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m a Full Stack developer based in Athens, Greece
+        Hello, I&apos;m a Senior Full Stack Engineer based in Athens, Greece
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -41,7 +41,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Giorgos Kallis
           </Heading>
-          <p>Full Stack Developer</p>
+          <p>Full Stack Engineer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -63,8 +63,8 @@ const Home = () => (
               src="/images/profile.jpg"
               alt="Profile image"
               borderRadius="full"
-              width="100%"
-              height="100%"
+              width={100}
+              height={100}
             />
           </Box>
         </Box>
@@ -75,12 +75,13 @@ const Home = () => (
           About
         </Heading>
         <Paragraph>
-          Giorgos is a Full Stack developer based in Athens and currently works
-          for Pitcher AG, a software sales enablement company based in Zurich,
-          Switzerland. He has a passion for solving real life problems with code
-          and loves to experiment with new technologies. He has experience in
-          building web and mobile applications, both on the front-end and
-          back-end.
+        I'm a Senior Full Stack Engineer with 7+ years of experience, 
+        currently at Pitcher AG building B2B SaaS for Fortune 500
+        sales organizations.
+
+        My work leans backend but I've been comfortable across the stack throughout my career, from frontend to async processing pipelines and cloud infrastructure.
+        
+        I care about systems that hold up under real use, code that other engineers can navigate, and shipping things end-to-end.
         </Paragraph>
         {/* <Box align="center" my={4}>
           <Link href="/projects" as={NextLink} passHref scroll={false}>
@@ -95,36 +96,9 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
-        <BioSection>
-          <BioYear>1994</BioYear>
-          Born in Athens, Greece.
-        </BioSection>
-        <BioSection>
-          <BioYear>2018</BioYear>
-          Worked at Travelsoft, a software travel agency in Athens, Greece.
-        </BioSection>
-        <BioSection>
-          <BioYear>2018</BioYear>
-          Worked at iNTERAD Web Media Company, a custom software solutions
-          company in Athens, Greece.
-        </BioSection>
-        <BioSection>
-          <BioYear>2019</BioYear>
-          Completed the Bachelor of Science Program in the Department of
-          Informatics and Telecommunications at Ethikon kai Kapodistriakon
-          Panepistimion Athinon.
-        </BioSection>
-        <BioSection>
-          <BioYear>2019</BioYear>
-          Worked at 7L International, a software development company in Athens,
-          Greece.
-        </BioSection>
-        <BioSection>
-          <BioYear>2020 to present</BioYear>
-          <br />
-          Working at Pitcher AG, a software Sales Enablement company in Zurich,
-          Switzerland.
-        </BioSection>
+        <Paragraph>
+        I grew up in Athens and studied Informatics & Telecommunications at the National and Kapodistrian University of Athens. I started as a frontend engineer at small Athens-based companies, working on travel booking, location-tracking, and access management software, before joining Pitcher AG in 2020. Six years later, I'm still there. I started as a Frontend Engineer, moved to backend, and now ship full-stack work as a Senior Engineer.
+        </Paragraph>
       </Section>
 
       <Section delay={0.3}>
@@ -136,7 +110,7 @@ const Home = () => (
         </Paragraph>
       </Section>
 
-      <Box align="center" my={4}>
+      {/* <Box align="center" my={4}>
         <Link
           href="https://giorgoskallisgr.devdojo.com/"
           target="_blank"
@@ -146,7 +120,7 @@ const Home = () => (
             Visit my blog
           </Button>
         </Link>
-      </Box>
+      </Box> */}
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
@@ -185,13 +159,17 @@ const Home = () => (
           </ListItem>
         </List>
 
-        <Box align="center" my={4}>
-          <NextLink href="/posts" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </NextLink>
-        </Box>
+        {/* <Box align="center" my={4}>
+          <Button
+            as={NextLink}
+            href="/projects"
+            scroll={false}
+            rightIcon={<ChevronRightIcon />}
+            colorScheme="teal"
+          >
+            Projects
+          </Button>
+        </Box> */}
       </Section>
     </Container>
   </Layout>

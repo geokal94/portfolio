@@ -1,17 +1,26 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Container, Heading, Text, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
-
-import thumbMovierama from '../public/images/projects/movierama.png'
+// import { SimpleGrid } from '@chakra-ui/react'
+// import { WorkGridItem } from '../components/grid-item'
+// import thumbMovierama from '../public/images/projects/movierama.png'
 
 const Projects = () => (
   <Layout title="Projects">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
-        Projects (More coming soon...)
+        Projects
       </Heading>
 
+      <Section>
+        <Box textAlign="center" py={10}>
+          <Text fontSize="lg" opacity={0.8}>
+            Something cool is coming...
+          </Text>
+        </Box>
+      </Section>
+
+      {/*
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem
@@ -23,6 +32,7 @@ const Projects = () => (
           </WorkGridItem>
         </Section>
       </SimpleGrid>
+      */}
     </Container>
   </Layout>
 )
