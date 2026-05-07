@@ -131,6 +131,7 @@ const CommandPalette = ({ isOpen, onClose }) => {
               ref={inputRef}
               variant="unstyled"
               placeholder="type a command..."
+              aria-label="command palette search"
               value={query}
               onChange={e => setQuery(e.target.value)}
               onKeyDown={onKey}

@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/react'
+import { Stack, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Hero from '../components/sections/hero'
 import About from '../components/sections/about'
@@ -12,6 +12,9 @@ import SectionReveal from '../components/section-reveal'
 
 const Home = () => (
   <Layout>
+    <Box as="h1" position="absolute" w="1px" h="1px" overflow="hidden" clip="rect(0 0 0 0)">
+      Giorgos Kallis — Senior Full-Stack Engineer
+    </Box>
     <Stack spacing={6}>
       <Hero />
       <SectionReveal>

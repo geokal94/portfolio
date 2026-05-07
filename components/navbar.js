@@ -39,11 +39,22 @@ const Navbar = props => {
             fontSize="xs"
             color={muted}
             cursor="pointer"
+            role="button"
+            tabIndex={0}
+            aria-label="open command palette"
             onClick={() =>
               window.dispatchEvent(
                 new KeyboardEvent('keydown', { key: 'k', metaKey: true })
               )
             }
+            onKeyDown={e => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.dispatchEvent(
+                  new KeyboardEvent('keydown', { key: 'k', metaKey: true })
+                )
+              }
+            }}
           >
             ⌘K
           </Box>

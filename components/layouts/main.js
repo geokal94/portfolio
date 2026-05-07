@@ -15,19 +15,30 @@ const Main = ({ children, router }) => (
       <title>Giorgos Kallis — Senior Full-Stack Engineer</title>
     </Head>
 
-    <a
+    <Box
+      as="a"
       href="#about"
-      style={{
-        position: 'absolute',
-        left: '-9999px',
-        top: 'auto',
-        width: '1px',
-        height: '1px',
-        overflow: 'hidden'
+      position="absolute"
+      left="-9999px"
+      top="auto"
+      width="1px"
+      height="1px"
+      overflow="hidden"
+      _focus={{
+        left: '12px',
+        top: '12px',
+        width: 'auto',
+        height: 'auto',
+        p: 2,
+        bg: 'accent',
+        color: 'black',
+        borderRadius: 'sm',
+        zIndex: 100,
+        fontSize: 'sm'
       }}
     >
       Skip to content
-    </a>
+    </Box>
 
     <NavBar path={router.asPath} />
 
