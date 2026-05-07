@@ -1,11 +1,9 @@
 import MonoCard from '../mono-card'
 
-// TODO(content): user to keep this updated as focus shifts.
 const Now = () => (
   <MonoCard label="now" id="now">
-    Currently building data-pipeline tooling at Pitcher AG and going deeper
-    on distributed-systems patterns. Outside work: lifting, reading, and
-    learning music theory.
+    Exploring DevOps practices more deeply and continuing to ship full-stack
+    features at Pitcher AG. Outside work: lifting, reading, and music theory.
   </MonoCard>
 )
 
