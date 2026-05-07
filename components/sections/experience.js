@@ -9,7 +9,7 @@ const Experience = () => (
         years="2020 → now"
         role="Senior Full Stack Engineer"
         company="Pitcher AG"
-        sub="Zurich · Remote · Frontend → Backend → Senior"
+        sub="Zurich · Remote · Backend → Senior Full Stack"
       />
       <TimelineEntry
         years="2020"
@@ -24,7 +24,7 @@ const Experience = () => (
       <TimelineEntry
         last
         years="2018 – 19"
-        role="Software Engineer"
+        role="Software Engineer (intern)"
         company="Travelsoft"
       />
     </Stack>
