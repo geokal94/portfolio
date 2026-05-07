@@ -2,7 +2,7 @@ import { Stack, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Hero from '../components/sections/hero'
 import About from '../components/sections/about'
-import Principles from '../components/sections/principles'
+// import Principles from '../components/sections/principles'
 // import SelectedWork from '../components/sections/selected-work'
 import Experience from '../components/sections/experience'
 import Now from '../components/sections/now'
@@ -20,9 +20,9 @@ const Home = () => (
       <SectionReveal>
         <About />
       </SectionReveal>
-      <SectionReveal>
+      {/* <SectionReveal>
         <Principles />
-      </SectionReveal>
+      </SectionReveal> */}
       {/* <SectionReveal>
         <SelectedWork />
       </SectionReveal> */}
