@@ -1,3 +1,19 @@
+:root {
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html,
 body {
-    font-family: 'Chivo Mono', monospace !important;
+  font-family: var(--font-mono);
+}
+
+/* Smooth scroll for in-page anchor jumps. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

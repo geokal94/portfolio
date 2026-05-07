@@ -1,8 +1,15 @@
+import { JetBrains_Mono } from 'next/font/google'
 import Layout from '../components/layouts/main'
-import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
 import Chakra from '../components/chakra'
 import '../styles/globals.css'
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-mono',
+  display: 'swap'
+})
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'
@@ -11,20 +18,13 @@ if (typeof window !== 'undefined') {
 function Website({ Component, pageProps, router }) {
   return (
     <Chakra cookies={pageProps.cookies}>
-      <Fonts />
-      <Layout router={router}>
-        <AnimatePresence
-          exitBeforeEnter
-          initial={true}
-          onExitComplete={() => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: 0 })
-            }
-          }}
-        >
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
+      <div className={jetbrainsMono.variable} style={{ fontFamily: 'var(--font-mono)' }}>
+        <Layout router={router}>
+          <AnimatePresence mode="wait" initial={true}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </Layout>
+      </div>
     </Chakra>
   )
 }
