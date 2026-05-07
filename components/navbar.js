@@ -1,144 +1,33 @@
-import Logo from './logo'
-import NextLink from 'next/link'
 import {
   Container,
   Box,
-  Link,
-  Stack,
-  Heading,
   Flex,
-  Menu,
-  MenuItem,
-  MenuList,
-  MenuButton,
-  IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import Logo from './logo'
 import ThemeToggleButton from './theme-toggle-button'
-import { IoLogoGithub, IoReaderOutline, IoLogoLinkedin } from 'react-icons/io5'
-
-const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
-  return (
-    <Link
-      as={NextLink}
-      href={href}
-      scroll={false}
-      p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
-      target={target}
-      {...props}
-    >
-      {children}
-    </Link>
-  )
-}
 
 const Navbar = props => {
-  const { path } = props
-
+  const bg = useColorModeValue('rgba(246,245,241,0.6)', 'rgba(11,13,16,0.6)')
   return (
     <Box
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      bg={bg}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
+      borderBottomWidth="1px"
+      borderBottomColor={useColorModeValue('borderLight', 'borderDark')}
       {...props}
     >
-      <Container
-        display="flex"
-        p={2}
-        maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
-      >
+      <Container display="flex" p={3} maxW="container.md" align="center" justify="space-between">
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
-          </Heading>
+          <Logo />
         </Flex>
-
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          display={{ base: 'none', md: 'flex' }}
-          width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, md: 0 }}
-        >
-          {/* <LinkItem href="/projects" path={path}>
-            Projects
-          </LinkItem> */}
-          {/* <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem> */}
-          <LinkItem
-            target="_blank"
-            href="https://github.com/geokal94"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            GitHub
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://www.linkedin.com/in/giorgos-kallis/"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoLinkedin />
-            LinkedIn
-          </LinkItem>
-        </Stack>
-
-        <Box flex={1} align="right">
+        <Flex align="center" gap={2}>
           <ThemeToggleButton />
-
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <MenuItem as={NextLink} href="/">
-                  About
-                </MenuItem>
-                {/* <MenuItem as={NextLink} href="/projects">Projects</MenuItem> */}
-                {/* <MenuItem as={NextLink} href="/posts">Posts</MenuItem> */}
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/geokal94"
-                  target="_blank"
-                >
-                  GitHub
-                </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href="https://www.linkedin.com/in/giorgos-kallis/"
-                  target="_blank"
-                >
-                  LinkedIn
-                </MenuItem>
-              </MenuList>
-            </Menu>
-          </Box>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   )
