@@ -1,26 +1,39 @@
-# My Homepage
+# giorgoskallis.dev
 
-[giorgoskallis.dev](https://giorgoskallis.dev)
-
-*This website is inspired by <a href='https://www.craftz.dog/' target='_blank'>craftz.dog</a> website.*
+Personal site of Giorgos Kallis — Senior Full-Stack Engineer.
 
 ## Stack
 
-- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
-- [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React
-- [Three.js](https://threejs.org/) - 3D library for JavaScript
-- [Framer Motion](https://www.framer.com/motion/) - An animation library for React
+- Next.js 16
+- Chakra UI
+- Framer Motion
+- JetBrains Mono via `next/font`
 
-## Project structure
+## Develop
+
+```bash
+yarn install
+yarn dev
+```
+
+## Build
+
+```bash
+yarn build && yarn start
+```
+
+## Layout
 
 ```
 $PROJECT_ROOT
-│   # Page files
-├── pages
-│   # React component files
+├── pages           # Next.js pages
 ├── components
-│   # Non-react modules
-├── lib
-│   # Static files for images and 3d model file
-└── public
+│   ├── sections    # Homepage section components
+│   └── ...         # Reusable primitives (TerminalFrame, MonoCard, etc.)
+├── lib             # Theme + helpers
+└── public          # Static assets
 ```
+
+## Keyboard
+
+- `⌘K` / `Ctrl+K` — command palette
