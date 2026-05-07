@@ -1,10 +1,4 @@
-import {
-  Box,
-  Stack,
-  Wrap,
-  WrapItem,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Box, Stack, Wrap, WrapItem } from '@chakra-ui/react'
 import MonoCard from '../mono-card'
 
 // TODO(content): Giorgos to fill in real entries. Each entry should describe
@@ -31,47 +25,39 @@ const ENTRIES = [
   }
 ]
 
-const Pill = ({ children }) => {
-  const border = useColorModeValue('borderLight', 'borderDark')
-  const muted = useColorModeValue('mutedLight', 'mutedDark')
-  return (
-    <Box
-      px={2}
-      py={0.5}
-      borderRadius="sm"
-      borderWidth="1px"
-      borderColor={border}
-      fontSize="2xs"
-      letterSpacing="0.08em"
-      color={muted}
-      textTransform="lowercase"
-    >
-      {children}
-    </Box>
-  )
-}
+const Pill = ({ children }) => (
+  <Box
+    px={2}
+    py={0.5}
+    borderRadius="sm"
+    borderWidth="1px"
+    borderColor="border"
+    fontSize="2xs"
+    letterSpacing="0.08em"
+    color="muted"
+    textTransform="lowercase"
+  >
+    {children}
+  </Box>
+)
 
-const Entry = ({ title, problem, tech }) => {
-  const muted = useColorModeValue('mutedLight', 'mutedDark')
-  const border = useColorModeValue('borderLight', 'borderDark')
-  return (
-    <Box pb={5} borderBottomWidth="1px" borderBottomColor={border} _last={{ borderBottomWidth: 0, pb: 0 }}>
-      <Box fontWeight={500} mb={1}>
-        {title}
-      </Box>
-      <Box color={muted} fontSize="sm" mb={3}>
-        {problem}
-      </Box>
-      <Wrap spacing={2}>
-        {tech.map(t => (
-          <WrapItem key={t}>
-            <Pill>{t}</Pill>
-          </WrapItem>
-        ))}
-      </Wrap>
+const Entry = ({ title, problem, tech }) => (
+  <Box pb={5} borderBottomWidth="1px" borderBottomColor="border" _last={{ borderBottomWidth: 0, pb: 0 }}>
+    <Box fontWeight={500} mb={1}>
+      {title}
     </Box>
-  )
-}
+    <Box color="muted" fontSize="sm" mb={3}>
+      {problem}
+    </Box>
+    <Wrap spacing={2}>
+      {tech.map(t => (
+        <WrapItem key={t}>
+          <Pill>{t}</Pill>
+        </WrapItem>
+      ))}
+    </Wrap>
+  </Box>
+)
 
 const SelectedWork = () => (
   <MonoCard label="selected work" id="work">

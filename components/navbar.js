@@ -1,26 +1,17 @@
-import {
-  Container,
-  Box,
-  Flex,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Container, Box, Flex } from '@chakra-ui/react'
 import Logo from './logo'
-import ThemeToggleButton from './theme-toggle-button'
 
 const Navbar = props => {
-  const bg = useColorModeValue('rgba(246,245,241,0.6)', 'rgba(11,13,16,0.6)')
-  const border = useColorModeValue('borderLight', 'borderDark')
-  const muted = useColorModeValue('mutedLight', 'mutedDark')
   return (
     <Box
       position="fixed"
       as="nav"
       w="100%"
-      bg={bg}
+      bg="rgba(11,13,16,0.6)"
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={2}
       borderBottomWidth="1px"
-      borderBottomColor={border}
+      borderBottomColor="border"
       {...props}
     >
       <Container display="flex" p={3} maxW="container.md" align="center" justify="space-between">
@@ -35,9 +26,9 @@ const Navbar = props => {
             py={1}
             borderRadius="sm"
             borderWidth="1px"
-            borderColor={border}
+            borderColor="border"
             fontSize="xs"
-            color={muted}
+            color="muted"
             cursor="pointer"
             role="button"
             tabIndex={0}
@@ -58,7 +49,6 @@ const Navbar = props => {
           >
             ⌘K
           </Box>
-          <ThemeToggleButton />
         </Flex>
       </Container>
     </Box>

@@ -763,7 +763,7 @@ const Hero = () => {
                 <Box as="span" color="accent">
                   status:
                 </Box>{' '}
-                shipping at pitcher · open to interesting problems
+                open to interesting problems
               </Box>
             )
           }

@@ -1,24 +1,21 @@
 import Link from 'next/link'
-import { Box, useColorModeValue } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
-const Logo = () => {
-  const text = useColorModeValue('textLight', 'textDark')
-  return (
-    <Link href="/" scroll={false} style={{ textDecoration: 'none' }}>
-      <Box
-        display="inline-flex"
-        alignItems="center"
-        fontSize="sm"
-        color={text}
-        fontWeight={500}
-      >
-        <Box as="span" color="accent" mr={2}>
-          ~/
-        </Box>
-        giorgos
+const Logo = () => (
+  <Link href="/" scroll={false} style={{ textDecoration: 'none' }}>
+    <Box
+      display="inline-flex"
+      alignItems="center"
+      fontSize="sm"
+      color="text"
+      fontWeight={500}
+    >
+      <Box as="span" color="accent" mr={2}>
+        ~/
       </Box>
-    </Link>
-  )
-}
+      giorgos
+    </Box>
+  </Link>
+)
 
 export default Logo

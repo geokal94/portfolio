@@ -26,7 +26,7 @@ The homepage is a single scrollable page with the following sections, in order:
   1. Types `$ whoami`
   2. Reveals `giorgos /* kallis */` in large monospace
   3. Subtitle: `senior full-stack · athens · 2018→`
-  4. Status line: `status: shipping at pitcher · open to interesting problems`
+  4. Status line: `status: open to interesting problems`
   5. Blinking cursor at a fresh `$` prompt
 - On revisits: hero appears in final state instantly, no replay
 - Cursor keeps blinking persistently

@@ -1,7 +1,6 @@
-import { Box, useColorModeValue } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 const Footer = () => {
-  const muted = useColorModeValue('mutedLight', 'mutedDark')
   const date = process.env.NEXT_PUBLIC_BUILD_DATE ?? 'unknown'
   return (
     <Box
@@ -9,9 +8,9 @@ const Footer = () => {
       mt={10}
       pt={6}
       fontSize="xs"
-      color={muted}
+      color="muted"
       borderTopWidth="1px"
-      borderTopColor={useColorModeValue('borderLight', 'borderDark')}
+      borderTopColor="border"
     >
       <Box as="span" color="accent">
         //

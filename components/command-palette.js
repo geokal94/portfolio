@@ -6,12 +6,10 @@ import {
   ModalBody,
   Box,
   Input,
-  Stack,
-  useColorModeValue,
-  useColorMode
+  Stack
 } from '@chakra-ui/react'
 
-const buildCommands = ({ toggleColorMode }) => [
+const COMMANDS = [
   {
     id: 'github',
     label: 'open github',
@@ -30,7 +28,7 @@ const buildCommands = ({ toggleColorMode }) => [
     label: 'send email',
     hint: '✉',
     run: () => {
-      window.location.href = 'mailto:hello@giorgoskallis.dev'
+      window.location.href = 'mailto:giorgos.kallis.gr@gmail.com'
     }
   },
   {
@@ -39,18 +37,6 @@ const buildCommands = ({ toggleColorMode }) => [
     hint: '↗',
     run: () =>
       window.open('https://github.com/geokal94/portfolio', '_blank', 'noopener,noreferrer')
-  },
-  {
-    id: 'theme',
-    label: 'toggle theme',
-    hint: '◐',
-    run: () => toggleColorMode()
-  },
-  {
-    id: 'jump-work',
-    label: 'jump to selected work',
-    hint: '↓',
-    run: () => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
   },
   {
     id: 'jump-experience',
@@ -69,13 +55,11 @@ const buildCommands = ({ toggleColorMode }) => [
 ]
 
 const CommandPalette = ({ isOpen, onClose }) => {
-  const { toggleColorMode } = useColorMode()
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(0)
   const inputRef = useRef(null)
 
-  const commands = buildCommands({ toggleColorMode })
-  const filtered = commands.filter(c =>
+  const filtered = COMMANDS.filter(c =>
     c.label.toLowerCase().includes(query.toLowerCase())
   )
 
@@ -108,22 +92,17 @@ const CommandPalette = ({ isOpen, onClose }) => {
     }
   }
 
-  const bg = useColorModeValue('bgLight', 'bgDark')
-  const border = useColorModeValue('borderLight', 'borderDark')
-  const muted = useColorModeValue('mutedLight', 'mutedDark')
-  const activeBg = useColorModeValue('rgba(0,0,0,0.05)', 'rgba(255,255,255,0.04)')
-
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered size="lg">
       <ModalOverlay backdropFilter="blur(6px)" bg="blackAlpha.500" />
       <ModalContent
-        bg={bg}
+        bg="bg"
         borderWidth="1px"
-        borderColor={border}
+        borderColor="border"
         fontFamily="var(--font-mono)"
       >
         <ModalBody p={0}>
-          <Box borderBottomWidth="1px" borderBottomColor={border} px={4} py={3}>
+          <Box borderBottomWidth="1px" borderBottomColor="border" px={4} py={3}>
             <Box as="span" color="accent" mr={2}>
               ~ $
             </Box>
@@ -140,7 +119,7 @@ const CommandPalette = ({ isOpen, onClose }) => {
           </Box>
           <Stack spacing={0} maxH="320px" overflowY="auto" py={2}>
             {filtered.length === 0 && (
-              <Box px={4} py={3} color={muted} fontSize="sm">
+              <Box px={4} py={3} color="muted" fontSize="sm">
                 no matches
               </Box>
             )}
@@ -150,7 +129,7 @@ const CommandPalette = ({ isOpen, onClose }) => {
                 px={4}
                 py={2}
                 cursor="pointer"
-                bg={i === active ? activeBg : 'transparent'}
+                bg={i === active ? 'rgba(255,255,255,0.04)' : 'transparent'}
                 onMouseEnter={() => setActive(i)}
                 onClick={() => {
                   c.run()
@@ -167,16 +146,16 @@ const CommandPalette = ({ isOpen, onClose }) => {
                   </Box>
                   {c.label}
                 </Box>
-                <Box color={muted}>{c.hint}</Box>
+                <Box color="muted">{c.hint}</Box>
               </Box>
             ))}
           </Stack>
           <Box
             borderTopWidth="1px"
-            borderTopColor={border}
+            borderTopColor="border"
             px={4}
             py={2}
-            color={muted}
+            color="muted"
             fontSize="xs"
             display="flex"
             gap={4}
