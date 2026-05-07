@@ -17,7 +17,7 @@ const Main = ({ children, router }) => (
 
     <Box
       as="a"
-      href="#about"
+      href="#hero-start"
       position="absolute"
       left="-9999px"
       top="auto"

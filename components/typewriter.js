@@ -70,7 +70,7 @@ const Typewriter = ({ lines, onComplete }) => {
 
     if (current.type === 'render') {
       setStep(s => s + 1)
-      return
+      return () => {}
     }
 
     if (current.type === 'pause') {

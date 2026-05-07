@@ -12,7 +12,7 @@ import SectionReveal from '../components/section-reveal'
 
 const Home = () => (
   <Layout>
-    <Box as="h1" position="absolute" w="1px" h="1px" overflow="hidden" clip="rect(0 0 0 0)">
+    <Box as="h1" position="absolute" w="1px" h="1px" overflow="hidden" sx={{ clipPath: 'inset(50%)' }}>
       Giorgos Kallis — Senior Full-Stack Engineer
     </Box>
     <Stack spacing={6}>

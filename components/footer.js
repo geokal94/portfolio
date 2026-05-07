@@ -2,7 +2,7 @@ import { Box, useColorModeValue } from '@chakra-ui/react'
 
 const Footer = () => {
   const muted = useColorModeValue('mutedLight', 'mutedDark')
-  const date = process.env.NEXT_PUBLIC_BUILD_DATE
+  const date = process.env.NEXT_PUBLIC_BUILD_DATE ?? 'unknown'
   return (
     <Box
       as="footer"

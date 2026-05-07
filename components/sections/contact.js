@@ -11,7 +11,7 @@ const Item = ({ label, href }) => {
       <Box as="span" color={muted}>
         [
       </Box>
-      <Link href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener">
+      <Link href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
         {label}
       </Link>
       <Box as="span" color={muted}>

@@ -31,7 +31,7 @@ const Hero = () => {
   const text = useColorModeValue('textLight', 'textDark')
 
   return (
-    <TerminalFrame>
+    <TerminalFrame id="hero-start">
       <Typewriter
         lines={[
           { type: 'type', text: 'whoami', prefix: <Prompt /> },

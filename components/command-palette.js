@@ -16,14 +16,14 @@ const buildCommands = ({ toggleColorMode }) => [
     id: 'github',
     label: 'open github',
     hint: '↗',
-    run: () => window.open('https://github.com/geokal94', '_blank')
+    run: () => window.open('https://github.com/geokal94', '_blank', 'noopener,noreferrer')
   },
   {
     id: 'linkedin',
     label: 'open linkedin',
     hint: '↗',
     run: () =>
-      window.open('https://www.linkedin.com/in/giorgos-kallis/', '_blank')
+      window.open('https://www.linkedin.com/in/giorgos-kallis/', '_blank', 'noopener,noreferrer')
   },
   {
     id: 'email',
@@ -38,7 +38,7 @@ const buildCommands = ({ toggleColorMode }) => [
     label: 'view source',
     hint: '↗',
     run: () =>
-      window.open('https://github.com/geokal94/portfolio', '_blank')
+      window.open('https://github.com/geokal94/portfolio', '_blank', 'noopener,noreferrer')
   },
   {
     id: 'theme',
