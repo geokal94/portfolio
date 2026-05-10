@@ -39,6 +39,13 @@ const COMMANDS = [
       window.open('https://github.com/geokal94/portfolio', '_blank', 'noopener,noreferrer')
   },
   {
+    id: 'jump-projects',
+    label: 'jump to projects',
+    hint: '↓',
+    run: () =>
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+  },
+  {
     id: 'jump-experience',
     label: 'jump to experience',
     hint: '↓',
