@@ -24,13 +24,13 @@ const Home = () => (
         <Principles />
       </SectionReveal> */}
       <SectionReveal>
-        <Projects />
-      </SectionReveal>
-      <SectionReveal>
         <Experience />
       </SectionReveal>
       <SectionReveal>
         <Now />
+      </SectionReveal>
+      <SectionReveal>
+        <Projects />
       </SectionReveal>
       <SectionReveal>
         <Contact />
