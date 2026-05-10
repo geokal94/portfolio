@@ -6,13 +6,13 @@ const Main = ({ children, router }) => (
   <Box as="main" pb={12}>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Giorgos Kallis — Senior Full-Stack Engineer, Athens." />
+      <meta name="description" content="Giorgos Kallis — Senior Full Stack Engineer, Athens." />
       <meta name="author" content="Giorgos Kallis" />
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <meta property="og:site_name" content="Giorgos Kallis" />
       <meta name="og:title" content="Giorgos Kallis" />
       <meta property="og:type" content="website" />
-      <title>Giorgos Kallis — Senior Full-Stack Engineer</title>
+      <title>Giorgos Kallis — Senior Full Stack Engineer</title>
     </Head>
 
     <Box

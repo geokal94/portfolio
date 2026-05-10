@@ -55,7 +55,7 @@ const Hero = () => (
           type: 'render',
           node: (
             <Box color="muted" fontSize={{ base: 'xs', md: 'sm' }}>
-              Senior Full Stack · Athens, Greece
+              Full Stack · Athens, Greece
             </Box>
           )
         },
