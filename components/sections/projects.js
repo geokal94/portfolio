@@ -5,10 +5,9 @@ const ENTRIES = [
   {
     title: 'home-scanner',
     description:
-      'Telegram alerts for new Greek apartment rentals on spitogatos.gr. Scrapes hourly and pings me when a listing matches my saved filters.',
+      'Tracks new Greek apartment rentals on spitogatos.gr and pings my Telegram bot when listings match saved filters. FastAPI + Postgres, deployed on Fly.io, hourly scrape via GitHub Actions and rotating proxies.',
     href: 'https://github.com/geokal94/home-scanner',
-    // TODO(content): confirm/edit the stack pills below.
-    tech: ['python', 'telegram bot', 'cron']
+    tech: ['python', 'fastapi', 'postgres', 'fly.io', 'github actions']
   }
 ]
 
